@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "name": "@ipyvega/labextension",
+  "version": "0.1.0",
+  "description": "A JupyterLab extension for rendering VEGA",
+  "author": "Vincent Moret <moret.vincent@gmail.com>",
+  "main": "dist/index.js",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab extension"
+  ],
+  "files": [
+    "dist/*.d.ts",
+    "dist/*.js",
+    "style/*.css"
+  ],
+  "jupyterlab": {
+    "mimeExtension": true
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "watch \"npm run build\" src --wait 10 --ignoreDotFiles",
+    "prepublish": "npm run build",
+    "extension:install": "jupyter labextension install @ipyvega/labextension",
+    "extension:uninstall": "jupyter labextension uninstall  @ipyvega/labextension",
+    "extension:enable": "jupyter labextension enable @ipyvega/labextension",
+    "extension:disable": "jupyter labextension disable @ipyvega/labextension"
+  },
+  "dependencies": {
+    "@jupyterlab/rendermime-interfaces": "^0.3.0",
+    "@phosphor/widgets": "^1.5.0",
+    "d3": "^4.10.0",
+    "vega": "^3.0.2",
+    "vega-embed": "^3.0.0-beta.20",
+    "vega-lite": "^2.0.0-beta.15"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.5",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.4",
+    "typescript": "~2.4.0",
+    "watch": "^1.0.1",
+    "webpack": "^3.5.5"
+  }
+}
