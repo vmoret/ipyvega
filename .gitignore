@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# node.js
+node_modules
+
+# ipyvega
+vega/static/*
