@@ -4,6 +4,7 @@ Jupyter Vega / Vega-Lite extension.
 from ._version import version_info, __version__
 
 from ._vega import Vega, VegaLite
+from ._data import VegaData
 
 
 # Running `npm run build` will create static resources in the static

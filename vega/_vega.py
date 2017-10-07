@@ -51,6 +51,22 @@ class VegaBase(HasTraits):
         # display objects
         display(bundle, metadata=self.metadata, raw=True)
 
+        
+def _ensure_schema(spec, schema):
+    """
+    Ensures there is a '$schema' key present in a Vega/VegaLite specificiation.
+    
+    Parameters
+    ----------
+    spec: Dict
+        the specificiation to check
+    schema: Unicode
+        the schema to use when no '$schema' key was present
+    """
+    return ({'$schema': schema, **spec} 
+            if len(this.schema) != 0 and '$schema' not in spec 
+            else spec)
+
 
 class Vega(VegaBase, FromFileMixin, FromUrlMixin, FromTemplateMixin):
     """
@@ -63,6 +79,12 @@ class Vega(VegaBase, FromFileMixin, FromUrlMixin, FromTemplateMixin):
     Scalar types (None, number, string) are not allowed, only dict containers.
     """
 
+    def __init__(self, spec, data=None, options=None, metadata=None, size=None):
+        _spec = _ensure_schema(spec, 
+                               'https://vega.github.io/schema/vega/v3.0.json')
+        super().__init__(_spec, data=data, options=options, metadata=metadata,
+                         size=size)
+    
     def __str__(self):
         return 'A Vega Plot'
 
@@ -78,5 +100,11 @@ class VegaLite(VegaBase, FromFileMixin, FromUrlMixin, FromTemplateMixin):
     Scalar types (None, number, string) are not allowed, only dict containers.
     """
 
+    def __init__(self, spec, data=None, options=None, metadata=None, size=None):
+        _spec = _ensure_schema(spec, 
+                               'https://vega.github.io/schema/vega-lite/v2.json')
+        super().__init__(_spec, data=data, options=options, metadata=metadata,
+                         size=size)
+    
     def __repr__(self):
         return 'A Vega-Lite Plot'
