@@ -27,7 +27,7 @@ class VegaSpec(dict):
             # compare a DataFrame to None.
             elements['data'] = {'values': VegaData.from_dframe(data)}
         elif isinstance(data, dict):
-            spec['data'] = []
+            elements['data'] = []
             # We have to do the isinstance test first because we can't
             # compare a DataFrame to None.
             for key, value in data.items():
