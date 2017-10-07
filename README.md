@@ -13,7 +13,7 @@ Install the python distribution with `pip`.
 Activate the Jupyter notebook extension
 
 ```bash
-    jupyter nbextension enable --py ipyvega
+    jupyter nbextension enable --py vega
 ```
 
 ```bash
