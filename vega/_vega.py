@@ -64,7 +64,7 @@ def _ensure_schema(spec, schema):
         the schema to use when no '$schema' key was present
     """
     return ({'$schema': schema, **spec} 
-            if len(this.schema) != 0 and '$schema' not in spec 
+            if len(schema) != 0 and '$schema' not in spec 
             else spec)
 
 
