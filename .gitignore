@@ -105,3 +105,4 @@ node_modules
 
 # ipyvega
 vega/static/*
+packages/nbextension/embed/*
