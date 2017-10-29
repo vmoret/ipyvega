@@ -32,8 +32,8 @@
     "@phosphor/widgets": "^1.5.0",
     "d3": "^4.10.0",
     "vega": "^3.0.2",
-    "vega-embed": "^3.0.0-rc6",
-    "vega-lite": "^2.0.0-rc5"
+    "vega-embed": "^3.0.0-beta.20",
+    "vega-lite": "^2.0.0-beta.15"
   },
   "devDependencies": {
     "css-loader": "^0.28.5",
