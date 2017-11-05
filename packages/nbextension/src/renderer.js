@@ -1,4 +1,4 @@
-const embed = require('vega-embed');
+const embed = require('vega-embed').default;
 
 import './index.css';
 
