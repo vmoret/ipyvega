@@ -1,6 +1,6 @@
 {
-  "private": true,
-  "name": "@ipyvega/labextension",
+  "private": false,
+  "name": "ipyvega-lab",
   "version": "0.2.1",
   "description": "A JupyterLab extension for rendering VEGA",
   "author": "Vincent Moret <moret.vincent@gmail.com>",
@@ -22,10 +22,10 @@
     "build": "webpack",
     "watch": "watch \"npm run build\" src --wait 10 --ignoreDotFiles",
     "prepublish": "npm run build",
-    "extension:install": "jupyter labextension install @ipyvega/labextension",
-    "extension:uninstall": "jupyter labextension uninstall  @ipyvega/labextension",
-    "extension:enable": "jupyter labextension enable @ipyvega/labextension",
-    "extension:disable": "jupyter labextension disable @ipyvega/labextension"
+    "extension:install": "jupyter labextension install ipyvega-lab",
+    "extension:uninstall": "jupyter labextension uninstall ipyvega-lab",
+    "extension:enable": "jupyter labextension enable ipyvega-lab",
+    "extension:disable": "jupyter labextension disable ipyvega-lab"
   },
   "dependencies": {
     "@jupyterlab/rendermime-interfaces": "^0.4.1",

@@ -12,7 +12,7 @@ Created as the [MIME render extension](https://github.com/jupyterlab/jupyterlab/
 ## Installation
 
 ```bash
-jupyter labextension install @ipyvega/labextension
+jupyter labextension install ipyvega-lab
 ```
 
 ## Development

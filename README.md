@@ -17,7 +17,7 @@ Activate the Jupyter notebook extension
 ```
 
 ```bash
-    jupyter labextension install @ipyvega/labextension
+    jupyter labextension install ipyvega-lab
 ```
 
 ## Usage
@@ -25,9 +25,9 @@ Activate the Jupyter notebook extension
 ```python
     import pandas as pd
     from vega import Vega
-    
+
     Vega.from_file('bar.vg.json')
-    
+
     df = pd.read_csv('some.csv', index_col=0)
     Vega({
         "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
