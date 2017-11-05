@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@ipyvega/labextension",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A JupyterLab extension for rendering VEGA",
   "author": "Vincent Moret <moret.vincent@gmail.com>",
   "main": "dist/index.js",
@@ -30,10 +30,7 @@
   "dependencies": {
     "@jupyterlab/rendermime-interfaces": "^0.4.1",
     "@phosphor/widgets": "^1.5.0",
-    "d3": "^4.10.0",
-    "vega": "^3.0.2",
-    "vega-embed": "^3.0.0-beta.20",
-    "vega-lite": "^2.0.0-beta.15"
+    "vega-embed": "^3.0.0-rc7"
   },
   "devDependencies": {
     "css-loader": "^0.28.5",

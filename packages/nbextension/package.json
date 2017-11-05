@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@ipyvega/nbextension",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Jupyter Notebook extension for rendering Vega V3 / Vega-Lite V2",
   "author": "Vincent Moret <moret.vincent@gmail.com>",
   "main": "lib/index.js",
@@ -19,10 +19,7 @@
     "extension:disable": "jupyter nbextension disable --py --sys-prefix ipyvega"
   },
   "dependencies": {
-    "d3": "^4.10.0",
-    "vega": "^3.0.2",
-    "vega-embed": "^3.0.0-beta.20",
-    "vega-lite": "^2.0.0-beta.15"
+    "vega-embed": "^3.0.0-rc7"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
