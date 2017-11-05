@@ -13,7 +13,8 @@ import {
 /**
  * Import vega-embed in this manner due to how it is exported.
  */
-import embed = require('vega-embed');
+import _embed = require('vega-embed');
+const embed = _embed.default;
 
 import '../style/index.css';
 
@@ -62,7 +63,7 @@ class OutputWidget extends Widget implements IRenderMime.IRenderer {
           (prev[curr] = data[curr], prev)
         , {});
 
-    return embed(this.node, spec, options)
+    return embed(this.node as HTMLBaseElement, spec, options)
       .then(({view, spec}) => {
         return view.toSVG();
       })
