@@ -87,7 +87,7 @@ const rendererFactory: IRenderMime.IRendererFactory = {
 
 
 const extension: IRenderMime.IExtension = {
-  name: 'VEGA3',
+  id: 'VEGA3',
   rendererFactory,
   rank: 0,
   dataType: 'json',
