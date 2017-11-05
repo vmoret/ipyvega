@@ -20,7 +20,8 @@ Activate the Jupyter notebook extension
 ```
 
 ```bash
-    jupyter labextension install ipyvega-lab
+    cd packages\labextension\
+    jupyter labextension link .
 ```
 
 ## Usage
