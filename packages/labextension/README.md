@@ -1,4 +1,4 @@
-# @ipyvega/mimerender
+# vmoret/ipyvega-lab
 
 A Vega V3 / Vega-Lite V2 JupyterLab MIME renderer extension.
 

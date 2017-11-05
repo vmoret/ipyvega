@@ -2,6 +2,9 @@
 
 A Vega V3 / Vega-Lite V2 Jupyter display library
 
+*Note* that the official [ipyvega](https://github.com/vega/ipyvega/tree/vega3)
+now also supports Vega 3.
+
 ## Installation
 
 Install the python distribution with `pip`.
